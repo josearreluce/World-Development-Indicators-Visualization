@@ -1,0 +1,212 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+}
+
+.app-container {
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .map-container {
+    background-color: #00a1ff;
+    border: 5px solid #000;
+    height: 25em;
+
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) {
+  .map-container {
+    background-color: #4FA1BC;
+    border: 5px solid #000;
+    height: 25em;
+
+    width: 100%;
+  }
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.country {
+  stroke-width: 0.1;
+}
+
+.country:hover {
+  stroke-width: 3;
+  stroke: #ffffff;
+}
+
+.grid {
+  width: 500px;
+}
+
+/* Slider Styles */
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #679FB2;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #679FB2;
+    cursor: pointer;
+}
+
+.slider-container {
+  display: flex;
+}
+
+.slider__prev,
+.slider__next {
+  background-color: #19667F;
+  border: 1px solid #19667F;
+  color: white;
+}
+
+.slider__prev:hover,
+.slider__next:hover {
+  background-color: #E06935;
+  border: 1px solid #E06935;
+}
+
+
+/* Layout Styles */
+.content-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.map-stuff {
+  width: 50%;
+}
+
+.grid-container {
+  border: 1px solid black;
+  margin: 0 2.5em;
+  height: 500px;
+  overflow-y: scroll;
+  width: 40%;
+}
+
+/* Filter Styles */
+.filter {
+  display: flex;
+  margin: 2em 0;
+}
+
+.filter-input-container {
+  padding: 0.5em;
+}
+
+.filter-input {
+  background-color: #19667F;
+  border: 1px solid #19667F;
+  color: white;
+  padding: 0.5em;
+}
+
+.filter-input:focus,
+.filter-input:hover {
+  background-color: #E06935;
+  border: 1px solid #E06935;
+}
+
+.active {
+  background-color: #E06935;
+  border: 1px solid #043a0b;
+}
+
+/* legend gradients */
+.gradientMap {
+  fill: url(#gradMap);
+}
+
+.gradientGrid {
+  fill: url(#gradGrid);
+}
+
+.legendText {
+  text-align: center;
+}
+
+.legendGrid-container {
+  align-self: flex-start;
+  margin-left: 2em;
+}
+
+/* Description and Current value Layouts */
+.indicator-description {
+  width: 50%;
+}
+
+.info-container {
+  display: flex;
+}
+
+.info-container *{
+  font-size: 1.2em;
+  margin-right: 2.5em;
+}
+
+.visualization-explanation {
+  display: flex;
+  padding: 2.5em;
+
+}
+
+.visualization-explanation h4 {
+  text-align: center;
+}
+
+.visualization-explanation div {
+  border: 1px solid black;
+  margin-right: 2em;
+  padding: 0.5em;
+}

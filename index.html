@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>p2 - scaffold</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="main.css"  type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <svg
+      width="0"
+      height="0">
+      <defs>
+          <linearGradient id="gradMap">
+            <stop offset="0" stop-color="#000000"/>
+            <stop offset="0.25" stop-color="#5c171d"/>
+            <stop offset="0.5" stop-color="#b85c2e"/>
+            <stop offset="0.75" stop-color="#dec57a"/>
+            <stop offset="1" stop-color="#f0f5d6"/>
+          </linearGradient>
+          <linearGradient id="gradGrid">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.02" stop-color="#f0faf5"/>
+            <stop offset="0.25" stop-color="#9cded7"/>
+            <stop offset="0.50" stop-color="#4b9dc3"/>
+            <stop offset="0.75" stop-color="#283d77"/>
+            <stop offset="1" stop-color="#110d26"/>
+          </linearGradient>
+      </defs>
+    </svg>
+    <div id="app" class="flex center"></div>
+    <div class="visualization-explanation">
+      <div>
+        <h4> Grid View </h4>
+        <p>
+          The square grid shows the change in the distribution of the countries
+          with respect to the selected indicator, over time. Each row in the heatmap 
+          represents a given year. Each column is a histogram interval (all of equal size)
+          within the range of the max and min values for a country and the indicator.
+          The color of a square represents the number of countries in the bin; white represents
+          0 countries and darkest blue represents the highest number of countries 
+          for a given indicator. Upon selection of a country on the map, the country's
+          path through the distribution over time is charted with an orange line.
+        </p>
+      </div>
+      <div>
+        <h4> Map </h4>
+        <p>
+          The color of each country represents the value of the chosen indicator.
+          Higher luminance corresponds to higher value. The colormap only supports
+          ordinal comparisons. Countries with out data for a given year are colored gray.
+
+          You can click on a country to see the name of the country and the value
+          of the indicator per country, and observe the country's path through development
+          in the grid view and observe the change in the chosen indicator over time.
+        </p>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
